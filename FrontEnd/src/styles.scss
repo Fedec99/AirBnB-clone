@@ -1,0 +1,223 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+:root {
+   --bs-primary: #ff005a;
+   --bs-link-color: var(--bs-primary);
+   --bs-link-hover-color: #c21753;
+   --bs-info: #7A88EC;
+   // --bs-primary: #e91e63;
+   --bs-info-rgb: 122, 136, 236;
+   --bs-primary-rgb: 233, 30, 99;
+   --bs-success-rgb: 246, 245, 174;
+
+}
+
+.lightMode {
+   --bs-body-color: #352D39;
+   --bs-body-color-rgb: 53, 45, 57;
+   --bs-body-bg: #fffcf9;
+   --bs-body-bg-rgb: 255, 255, 255;
+   --bs-body-bgi: #ffffff50;
+}
+
+.darkMode {
+   --bs-body-color: #dee2e6;
+   --bs-body-color-rgb: 222, 226, 230;
+   --bs-body-bg: #000;
+   --bs-body-bg-rgb: 0, 0, 0;
+   --bs-body-bgi: #00000050;
+   // --bs-body-bg: #171D1C;
+   // --bs-body-bgi: #171D1C50;
+   // #userMenu~.dropdown-menu .dropdown-item:hover {
+   //    box-shadow: 0 1px 3px #b11f1f;
+   // }
+}
+
+.mask {
+   background-image: linear-gradient(195deg, #EC407A 0%, #D81B60 100%);
+   opacity: 0.45;
+}
+
+.profile, .travels {
+   margin-top: -250px;
+}
+
+.modal {
+   --bs-modal-bg: var(--bs-body-bg);
+}
+
+.form-control, .form-control:focus {
+   background-color: var(--bs-body-bg);
+   color: var(--bs-body-color);
+}
+
+.dropdown-menu, .dropdown-item {
+   --bs-dropdown-color: var(--bs-body-color);
+   --bs-dropdown-bg: var(--bs-body-bg);
+   color: var(--bs-body-color);
+}
+
+.dropdown-menu {
+   box-shadow: 0 2px 4px #00000066;
+}
+
+.dropdown-item {
+   &:active {
+      background-color: transparent;
+   }
+   &:hover {
+      background-color: var(--bs-info);
+
+   }
+   &:first-child:hover {
+      border-radius: 6px 6px 0 0;
+   }
+   &:last-child:hover {
+      border-radius: 0 0 6px 6px;
+   }
+}
+
+.filled {
+   top: 0;
+   left: 0;
+}
+
+.page-item.active {
+   box-shadow: none;
+}
+
+.pagination {
+   --bs-pagination-focus-box-shadow: none;
+   --bs-pagination-color: var(--bs-primary);
+   --bs-pagination-active-bg: var(--bs-primary);
+   --bs-pagination-active-border-color: var(--bs-primary);
+   --bs-pagination-border-color: var(--bs-danger);
+   --bs-pagination-disabled-border-color: var(--bs-danger);
+   --bs-pagination-bg: var(--bs-body-bg);
+   --bs-pagination-disabled-bg: var(--bs-body-bg);
+   --bs-pagination-focus-bg: var(--bs-info);
+   --bs-pagination-focus-color: var(--bs-dark);
+   --bs-pagination-hover-bg: var(--bs-info);
+   --bs-pagination-hover-color: var(--bs-dark);
+}
+
+.page-link:hover {
+   border-color: var(--bs-body-bg);
+}
+
+.btn-outline-primary {
+   --bs-btn-color: var(--bs-primary);
+   --bs-btn-border-color: var(--bs-primary);
+   --bs-btn-hover-color: var(--bs-white);
+   --bs-btn-hover-bg: var(--bs-primary);
+   --bs-btn-hover-border-color: var(--bs-primary);
+   --bs-btn-focus-shadow-rgb: 13, 110, 253;
+   --bs-btn-active-color: var(--bs-white);
+   --bs-btn-active-bg: var(--bs-primary);
+   --bs-btn-active-border-color: var(--bs-primary);
+   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+   --bs-btn-disabled-color: var(--bs-primary);
+   --bs-btn-disabled-bg: transparent;
+   --bs-btn-disabled-border-color: var(--bs-primary);
+   --bs-gradient: none;
+}
+
+.mapboxgl-popup-content {
+   border: 1px solid rgba(var(--bs-primary-rgb));
+   border-radius: var(--bs-border-radius-xl);
+   padding:10px;
+}
+
+a {
+   text-decoration: none;
+}
+
+ul, li {
+   list-style: none;
+   padding-left: 0;
+}
+
+.fadeIn {
+   animation: fadeInBottom 0.5s;
+}
+
+@keyframes fadeInBottom {
+   0% { opacity:0; transform:translateY(100%) }
+   to { opacity:1}
+}
+
+.rotate {
+   animation: flipRotation 1s;
+}
+
+@keyframes flipRotation {
+   from { transform: rotateY(0deg) }
+   to { transform: rotateY(720deg) }
+}
+
+.rotate2 {
+   animation: flipRotation2 0.5s;
+}
+
+@keyframes flipRotation2 {
+   from { transform: rotateY(0deg) }
+   to { transform: rotateY(360deg) }
+}
+
+.text-justify {
+   text-align: justify;
+}
+
+.custom-day {
+   text-align: center;
+   padding: 0.185rem 0.25rem;
+   display: inline-block;
+   height: 2rem;
+   width: 2rem;
+}
+
+.custom-day.focused {
+   background-color: #e6e6e6;
+}
+
+.custom-day.range, .custom-day:hover {
+   background-color: var(--bs-primary);
+   color: var(--bs-white);
+}
+
+.firstOfRange {
+   border-radius: 20px 0 0 20px;
+}
+
+.lastOfRange {
+   border-radius: 0 20px 20px 0;
+}
+
+.custom-day.faded {
+   background-color: rgba(255, 0, 90, 0.5);
+}
+
+.ngb-dp-weekdays, .ngb-dp-month-name, .ngb-dp-header {
+   background-color: var(--bs-body-bg) !important;
+}
+
+.disabled {
+   background-color: var(--bs-gray-200);
+}
+
+.page-item.disabled {
+   background-color: transparent;
+}
+
+div.disabled[role="gridcell"] {
+   color: var(--bs-black);
+}
+
+body {
+   overflow-x:hidden;
+}
+
+img[alt='reviewer avatar'] {
+   width: 50px;
+   height: 50px;
+}

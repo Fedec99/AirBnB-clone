@@ -1,0 +1,41 @@
+.illustration {
+   background: url('../../../assets/img/illustration.png') 50% 100%;
+   background-size: cover;
+   min-height: 350px;
+}
+
+.card {
+   background-color: var(--bs-body-bgi);
+}
+
+.badger {
+   background-color: var(--bs-body-bg);
+}
+
+.user-pic {
+   width: 140px;
+}
+
+.fakeAvatar {
+   font-size: 130px;
+}
+
+.editImage {
+   padding: 0;
+   width: 27px;
+   height: 27px;
+   right: 30%;
+   top: 10%
+
+}
+
+.edit {
+   width: 27px;
+   height: 27px;
+   &-about {
+      font-size: 14px;
+   }
+}
+
+
+
